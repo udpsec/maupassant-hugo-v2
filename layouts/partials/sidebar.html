@@ -1,0 +1,71 @@
+<div id="secondary">
+	<section class="widget">
+		{{ partial "search_form" . }}
+	</section>
+	<!-- 日历 -->
+	<section class="widget">
+		<div id="calendar" class="calendar"></div>
+	</section>
+	<section class="widget">
+		<h3 class="widget-title">最近文章</h3>
+		<ul class="widget-list">
+			{{ range first 10 (where (where .Site.Pages "Type" "post") "Kind" "page") }}
+			<li>
+				<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+			</li>
+			{{ end }}
+		</ul>
+	</section>
+
+	<section class="widget">
+		<h3 class="widget-title"><i class="fa fa-folder-o"></i>&nbsp;分类</h3>
+		<ul class="widget-list">
+			{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+			<li>
+				<li class="fa fa-angle-right">
+				<a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}({{len $taxonomy}})</a>
+			</li>
+			{{ end }}
+		</ul>
+	</section>
+<!-- <section class="widget wow slow zoomIn">
+        <h3 class="widget-title"><i class="fa fa-calendar-check-o"></i>&nbsp;归档</h3>
+        <ul class="widget-list">
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+            <li class="fa fa-angle-right">
+                <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }} ({{len $taxonomy.Pages}})</a>
+            </li><br />
+            {{ end }}
+        </ul>
+    </section>-->
+	<section class="widget">
+		<h3 class="widget-title">标签</h3>
+		<div class="tagcloud">
+			{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+			<a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
+			{{ end }}
+		</div>
+	</section>
+
+	{{ with .Site.Params.links }}
+	<section class="widget">
+		<h3 class="widget-title">友情链接</h3>
+		<ul class="widget-list">
+			{{ range . }}
+			<li>
+				<a rel="noreferrer noopener nofollow" href="{{ .url }}" title="{{ .title }}">{{ .name }}</a>
+			</li>
+			{{ end }}
+		</ul>
+	</section>
+	{{ end }}
+
+	<section class="widget">
+		<h3 class="widget-title">其它</h3>
+		<ul class="widget-list">
+			<li>
+				<a href="{{ "index.xml" | relURL }}">文章 RSS</a>
+			</li>
+		</ul>
+	</section>
+</div>

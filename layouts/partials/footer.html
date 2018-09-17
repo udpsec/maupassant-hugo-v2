@@ -1,0 +1,35 @@
+<footer id="footer">
+    <div class="container">
+        &copy; 2018 <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }}</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a>.
+        <a href="https://inofd.com/">Theme</a> based on <a href="https://github.com/udpsec/maupassant-hugo">maupassant</a>.
+        {{ if .Site.Params.showHostPage }}
+        Hosted by <a rel="nofollow noreferer noopener" href="https://github.com">Github Pages</a>.
+        {{ end }}
+    </div>
+</footer>
+<!-- 首页线条支持 -->
+<script type="text/javascript" src="{{ "js/all.js" | relURL}}" ></script>
+{{ if .IsPage }}
+<script type="text/javascript" src="{{ "js/prism.js" | relURL}}" async="true"></script>
+<script type="text/javascript">
+window.MathJax = {
+    tex2jax: {
+        inlineMath: [ ['$','$'] ],
+        processEscapes: true
+    }
+};
+</script>
+<!-- 日历支持 -->
+<script type="text/javascript" src="{{ "js/calendar.js" | relURL}}" defer></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+{{ end }}
+<a id="rocket" href="#top" class="show"></a>
+<script type="text/javascript" src="{{ "js/totop.js?v=0.0.0" | relURL }}" async=""></script>
+{{ template "_internal/google_analytics_async.html" . }}
+
+{{ if .Site.Params.busuanzi }}
+<script type="text/javascript" src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+{{ end }}
+<!-- toc支持 -->
+<script type="text/javascript" src="{{ "js/app.js" | relURL}}" defer></script>
