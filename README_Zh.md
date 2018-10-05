@@ -196,8 +196,6 @@ preserveTaxonomyNames = true
 disablePathToLower = true
 ```
 
-
-
 ## 贡献
 
 欢迎大家贡献，不限于代码、Issue，功能特性，想法等等，期待看到你的PR或者ISSUE。

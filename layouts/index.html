@@ -17,7 +17,7 @@
                                 </h1>
 							</header>
 							<date class="post-meta meta-date">
-								<i class="fa fa-calendar" aria-hidden="true"></i>
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
 								{{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日 {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }}
 							</date>
 							<!-- 作者名  start-->
@@ -35,7 +35,7 @@
 							</div>
 							{{ end }}
 							<div class="post-content">
-								{{ .Content | markdownify | truncate 180 }}								
+								{{ .Content | markdownify | truncate 40}}								
                                 <br />
 							</div>
 							<p class="readmore">
@@ -45,7 +45,6 @@
 						{{ end }} {{ partial "paginator" . }}
 					</div>
 				</div>
-
 				{{ partial "sidebar" . }}
 			</div>
 		</div>
