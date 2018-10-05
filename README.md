@@ -1,7 +1,7 @@
 # Maupassant
 Maupassant theme, ported to Hugo.
 
-1. Preview: [码中春秋's Blog](https://inofd.com/)
+1. Preview: [码中春秋's Blog](https://blog.inofd.com/)
 2. [中文文档](README_Zh.md)
 
 A simple Hugo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [飞雪无情的博客](https://github.com/rujews/maupassant-hugoo).
@@ -30,7 +30,7 @@ theme = "maupassant"
 #### Basic Configuration
 
 ```toml
-baseURL = "https://inofd.com"
+baseURL = "https://blog.inofd.com"
 languageCode = "zh-CN"
 title = "码中春秋's Blog"
 theme = "maupassant"
@@ -67,7 +67,7 @@ theme = "maupassant"
 [[params.links]]
   title = "码中春秋"
   name = "码中春秋"
-  url = "https://inofd.com/"
+  url = "https://blog.inofd.com/"
 ```
 
 #### Google Analytics
