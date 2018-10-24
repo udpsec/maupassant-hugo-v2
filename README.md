@@ -4,7 +4,7 @@ Maupassant theme, ported to Hugo.
 1. Preview: [码中春秋's Blog](https://blog.inofd.com/)
 2. [中文文档](README_Zh.md)
 
-A simple Hugo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [飞雪无情的博客](https://github.com/rujews/maupassant-hugoo).
+A simple Hugo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [飞雪无情的博客](https://github.com/rujews/maupassant-hugo).
 
 ## Preview
 
